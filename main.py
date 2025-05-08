@@ -6,12 +6,9 @@ def main():
     word_count = get_word_count("books/frankenstein.txt")  # Call the function
     print(f"{word_count} words found in the document")  # Print the result
 
-
-    text = get_text("books/frankenstein.txt")  # Call the function
-    chars = count_characters(text)  # Call the function
-    print(chars)  # Print the result
-
-    
+    chars = count_characters(get_text("books/frankenstein.txt"))  # Call the function
+    for char, count in sorted(chars.items()): # Iterate over the dictionary alphabetically
+        print (f"{char}: {count}")  # Print the result
 
 main()
 

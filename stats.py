@@ -18,8 +18,5 @@ def count_characters(text):
         else:
             chars[char] = 1
     
-    
-
-    labeled_output = {f"{char.lower()}": count for char, count in chars.items()}
-    return labeled_output
+    return chars
     
