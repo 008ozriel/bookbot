@@ -3,3 +3,23 @@ def get_word_count(path_to_file):
     with open(path_to_file) as f:
         file_contents = f.read()
     return len(file_contents.split())  # Count the words
+
+def get_text(path_to_file):
+    with open(path_to_file) as f:
+        file_contents = f.read()
+    return file_contents
+    
+def count_characters(text):
+    chars = {}
+    for char in text:
+        char = char.lower()
+        if char in chars:
+            chars[char] += 1 
+        else:
+            chars[char] = 1
+    
+    
+
+    labeled_output = {f"{char.lower()}": count for char, count in chars.items()}
+    return labeled_output
+    
